@@ -92,24 +92,6 @@ Module metodos
         End If
         Return resultado
     End Function
-    '******************************************************************************************************************************************************'
 
-
-    'FUNCION DE ELIMINACION'
-    '***************************************************************************************************************************************************'
-    Function eliminarReservacion(ByVal identificacion As String) As String
-        Dim resultado As String
-        Try
-            enunciado = New SqlCommand("Delete Reservacion from Reservacion where Id_Cliente='" & identificacion & "'", conexiones)
-            enunciado.ExecuteNonQuery()
-            resultado = "Se elimino la reservacion Correctamente"
-        Catch ex As Exception
-            resultado = "No se elimino elimino la reservacion correctamente" + ex.ToString
-
-        End Try
-        Return resultado
-
-    End Function
-    '***************************************************************************************************************************************************'
 
 End Module

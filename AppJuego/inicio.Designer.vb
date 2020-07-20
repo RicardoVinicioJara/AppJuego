@@ -95,7 +95,6 @@ Partial Class inicio
         Me.txtApodo.Name = "txtApodo"
         Me.txtApodo.Size = New System.Drawing.Size(261, 29)
         Me.txtApodo.TabIndex = 7
-        Me.txtApodo.Text = "jara"
         '
         'label3
         '
@@ -114,7 +113,6 @@ Partial Class inicio
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(262, 29)
         Me.txtNombre.TabIndex = 1
-        Me.txtNombre.Text = "jara"
         '
         'btnCrear
         '
@@ -144,7 +142,6 @@ Partial Class inicio
         Me.txtContra.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContra.Size = New System.Drawing.Size(261, 29)
         Me.txtContra.TabIndex = 3
-        Me.txtContra.Text = "jara"
         '
         'groupBox1
         '
@@ -180,7 +177,6 @@ Partial Class inicio
         Me.txtApodoL.Name = "txtApodoL"
         Me.txtApodoL.Size = New System.Drawing.Size(202, 29)
         Me.txtApodoL.TabIndex = 1
-        Me.txtApodoL.Text = "jara"
         '
         'button1
         '
@@ -210,7 +206,6 @@ Partial Class inicio
         Me.txtContraL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContraL.Size = New System.Drawing.Size(202, 29)
         Me.txtContraL.TabIndex = 3
-        Me.txtContraL.Text = "jara"
         '
         'Label6
         '
@@ -250,7 +245,7 @@ Partial Class inicio
         Me.btnJuego1.Name = "btnJuego1"
         Me.btnJuego1.Size = New System.Drawing.Size(146, 48)
         Me.btnJuego1.TabIndex = 4
-        Me.btnJuego1.Text = "Acceder"
+        Me.btnJuego1.Text = "Juego 1"
         Me.btnJuego1.UseVisualStyleBackColor = True
         '
         'btnJuego2
@@ -260,7 +255,7 @@ Partial Class inicio
         Me.btnJuego2.Name = "btnJuego2"
         Me.btnJuego2.Size = New System.Drawing.Size(146, 48)
         Me.btnJuego2.TabIndex = 5
-        Me.btnJuego2.Text = "Acceder"
+        Me.btnJuego2.Text = "Juego 2"
         Me.btnJuego2.UseVisualStyleBackColor = True
         '
         'inicio
