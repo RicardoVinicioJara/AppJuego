@@ -8,16 +8,13 @@ Module Conexion
     Public adaptador As SqlDataAdapter
 
 
-    'FUNCION DE CONEXION A LA BASE DE DATOS'
-    '***********************************************************************************************************************************************'
-
     Function Abrirconexion() As String
         Try
             conexiones = New SqlConnection("Data Source=LAPTOP-A3DS3D8A\SQLEXPRESS;Initial Catalog=Juego;Integrated Security=True")
             conexiones.Open()
             'MsgBox("Conexion exitosa", MsgBoxStyle.Information, "Se ha conectado correctamente") '
+            conexiones.Close()
             Return "Conexion exitosa"
-
         Catch ex As Exception
             'MsgBox("Error al realizar la conexion" & ex.Message, MsgBoxStyle.Critical, "Error de conexion")'
             conexiones.Close() 'Cierra la conexion'
@@ -25,26 +22,57 @@ Module Conexion
         End Try
     End Function
 
-    '***********************************************************************************************************************************************'
-
-
-    'FUNCION DE INSERCION '
-    '***************************************************************************************************************************************************'
-    Function insercionReservacion(ByVal identificacion As String, ByVal nombre As String, ByVal telefono As String, ByVal hora As String, ByVal fecha As Date, ByVal horaIngreso As String, ByVal horaSalida As String, ByVal numeroHabitacion As Integer, ByVal nacionalidad As Integer) As String
-
-        Dim resultado As String = ""
-
+    Function MaxID() As Integer
+        Dim resultado As Integer = -1
         Try
-            enunciado = New SqlCommand("insert into Reservacion(Id_Cliente,Nombre_Cliente,Telefono_Cliente,Hora_Reservacion,Fecha_Reservacion,Hora_Ingreso,Hora_Salida,Numero_Habitacion,Nacionalidad) values('" & identificacion & "','" & nombre & "','" & telefono & "','" & hora & "','" & fecha & "','" & horaIngreso & "','" & horaSalida & "'," & numeroHabitacion & "," & nacionalidad & ")", conexiones)
-            enunciado.ExecuteNonQuery()
-            resultado = "Se ha reservado correctamente"
+            conexiones.Open()
+            enunciado = New SqlCommand("SELECT MAX(id) FROM Jugador", conexiones)
+            resultado = enunciado.ExecuteScalar()
             conexiones.Close()
+            Return resultado
 
         Catch ex As Exception
-            resultado = "No se pudo realizar la Reservacion"
+            resultado = -1
             conexiones.Close()
 
         End Try
+        Return resultado
+    End Function
+
+    Function exitApodo(ByVal apodo As String) As Boolean
+        Dim resultado As Boolean = False
+        Try
+            conexiones.Open()
+            enunciado = New SqlCommand("SELECT CASE WHEN EXISTS ( SELECT * FROM Jugador WHERE apodo = '" & apodo & "')  THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END", conexiones)
+            resultado = enunciado.ExecuteScalar()
+            conexiones.Close()
+            Return resultado
+
+        Catch ex As Exception
+            resultado = False
+            conexiones.Close()
+
+        End Try
+        Return resultado
+    End Function
+
+    Function insertarJugador(ByVal nombre As String, ByVal fechaNac As Date, ByVal apodo As String, ByVal contrasenia As String) As Boolean
+        Dim id As Integer = MaxID() + 1
+        Dim resultado As Boolean = False
+        If id > 0 Then
+            Try
+                conexiones.Open()
+                enunciado = New SqlCommand("insert into Jugador(id,nombre,fechaNac,apodo,Contracenia) values(" & id & ",'" & nombre & "','" & Format(fechaNac, "yyyy/MM/dd") & "','" & apodo & "','" & contrasenia & "')", conexiones)
+                enunciado.ExecuteNonQuery()
+                resultado = True
+                conexiones.Close()
+            Catch ex As Exception
+                Console.Write("No se pudo realizar la Reservacion" + ex.ToString)
+                conexiones.Close()
+                resultado = False
+
+            End Try
+        End If
         Return resultado
     End Function
     '******************************************************************************************************************************************************'

@@ -25,12 +25,12 @@ Partial Class inicio
         Me.lblConexion = New System.Windows.Forms.Label()
         Me.groupBox2 = New System.Windows.Forms.GroupBox()
         Me.label5 = New System.Windows.Forms.Label()
-        Me.textBox5 = New System.Windows.Forms.TextBox()
+        Me.txtApodo = New System.Windows.Forms.TextBox()
         Me.label3 = New System.Windows.Forms.Label()
-        Me.textBox3 = New System.Windows.Forms.TextBox()
-        Me.button2 = New System.Windows.Forms.Button()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.btnCrear = New System.Windows.Forms.Button()
         Me.label4 = New System.Windows.Forms.Label()
-        Me.textBox4 = New System.Windows.Forms.TextBox()
+        Me.txtContra = New System.Windows.Forms.TextBox()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.textBox1 = New System.Windows.Forms.TextBox()
@@ -38,7 +38,7 @@ Partial Class inicio
         Me.label2 = New System.Windows.Forms.Label()
         Me.textBox2 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.txtFecha = New System.Windows.Forms.DateTimePicker()
         Me.groupBox2.SuspendLayout()
         Me.groupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -57,15 +57,15 @@ Partial Class inicio
         'groupBox2
         '
         Me.groupBox2.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.groupBox2.Controls.Add(Me.DateTimePicker1)
+        Me.groupBox2.Controls.Add(Me.txtFecha)
         Me.groupBox2.Controls.Add(Me.Label6)
         Me.groupBox2.Controls.Add(Me.label5)
-        Me.groupBox2.Controls.Add(Me.textBox5)
+        Me.groupBox2.Controls.Add(Me.txtApodo)
         Me.groupBox2.Controls.Add(Me.label3)
-        Me.groupBox2.Controls.Add(Me.textBox3)
-        Me.groupBox2.Controls.Add(Me.button2)
+        Me.groupBox2.Controls.Add(Me.txtNombre)
+        Me.groupBox2.Controls.Add(Me.btnCrear)
         Me.groupBox2.Controls.Add(Me.label4)
-        Me.groupBox2.Controls.Add(Me.textBox4)
+        Me.groupBox2.Controls.Add(Me.txtContra)
         Me.groupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupBox2.Location = New System.Drawing.Point(481, 50)
         Me.groupBox2.Name = "groupBox2"
@@ -84,14 +84,14 @@ Partial Class inicio
         Me.label5.TabIndex = 6
         Me.label5.Text = "Apodo"
         '
-        'textBox5
+        'txtApodo
         '
-        Me.textBox5.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBox5.Location = New System.Drawing.Point(70, 179)
-        Me.textBox5.Name = "textBox5"
-        Me.textBox5.Size = New System.Drawing.Size(261, 29)
-        Me.textBox5.TabIndex = 7
-        Me.textBox5.Text = "jara"
+        Me.txtApodo.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApodo.Location = New System.Drawing.Point(70, 179)
+        Me.txtApodo.Name = "txtApodo"
+        Me.txtApodo.Size = New System.Drawing.Size(261, 29)
+        Me.txtApodo.TabIndex = 7
+        Me.txtApodo.Text = "jara"
         '
         'label3
         '
@@ -103,24 +103,24 @@ Partial Class inicio
         Me.label3.TabIndex = 0
         Me.label3.Text = "Nombre"
         '
-        'textBox3
+        'txtNombre
         '
-        Me.textBox3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBox3.Location = New System.Drawing.Point(69, 86)
-        Me.textBox3.Name = "textBox3"
-        Me.textBox3.Size = New System.Drawing.Size(262, 29)
-        Me.textBox3.TabIndex = 1
-        Me.textBox3.Text = "jara"
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(69, 86)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(262, 29)
+        Me.txtNombre.TabIndex = 1
+        Me.txtNombre.Text = "jara"
         '
-        'button2
+        'btnCrear
         '
-        Me.button2.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.button2.Location = New System.Drawing.Point(88, 449)
-        Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(146, 48)
-        Me.button2.TabIndex = 5
-        Me.button2.Text = "Crear"
-        Me.button2.UseVisualStyleBackColor = True
+        Me.btnCrear.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrear.Location = New System.Drawing.Point(126, 430)
+        Me.btnCrear.Name = "btnCrear"
+        Me.btnCrear.Size = New System.Drawing.Size(146, 48)
+        Me.btnCrear.TabIndex = 5
+        Me.btnCrear.Text = "Crear"
+        Me.btnCrear.UseVisualStyleBackColor = True
         '
         'label4
         '
@@ -132,15 +132,15 @@ Partial Class inicio
         Me.label4.TabIndex = 2
         Me.label4.Text = "Contraseña"
         '
-        'textBox4
+        'txtContra
         '
-        Me.textBox4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBox4.Location = New System.Drawing.Point(70, 386)
-        Me.textBox4.Name = "textBox4"
-        Me.textBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.textBox4.Size = New System.Drawing.Size(261, 29)
-        Me.textBox4.TabIndex = 3
-        Me.textBox4.Text = "jara"
+        Me.txtContra.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContra.Location = New System.Drawing.Point(70, 386)
+        Me.txtContra.Name = "txtContra"
+        Me.txtContra.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContra.Size = New System.Drawing.Size(261, 29)
+        Me.txtContra.TabIndex = 3
+        Me.txtContra.Text = "jara"
         '
         'groupBox1
         '
@@ -217,12 +217,12 @@ Partial Class inicio
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Fecha de Nacimiento"
         '
-        'DateTimePicker1
+        'txtFecha
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(70, 287)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(261, 29)
-        Me.DateTimePicker1.TabIndex = 9
+        Me.txtFecha.Location = New System.Drawing.Point(70, 287)
+        Me.txtFecha.Name = "txtFecha"
+        Me.txtFecha.Size = New System.Drawing.Size(261, 29)
+        Me.txtFecha.TabIndex = 9
         '
         'inicio
         '
@@ -246,18 +246,18 @@ Partial Class inicio
     Private WithEvents lblConexion As Label
     Private WithEvents groupBox2 As GroupBox
     Private WithEvents label5 As Label
-    Private WithEvents textBox5 As TextBox
+    Private WithEvents txtApodo As TextBox
     Private WithEvents label3 As Label
-    Private WithEvents textBox3 As TextBox
-    Private WithEvents button2 As Button
+    Private WithEvents txtNombre As TextBox
+    Private WithEvents btnCrear As Button
     Private WithEvents label4 As Label
-    Private WithEvents textBox4 As TextBox
+    Private WithEvents txtContra As TextBox
     Private WithEvents groupBox1 As GroupBox
     Private WithEvents label1 As Label
     Private WithEvents textBox1 As TextBox
     Private WithEvents button1 As Button
     Private WithEvents label2 As Label
     Private WithEvents textBox2 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents txtFecha As DateTimePicker
     Private WithEvents Label6 As Label
 End Class
