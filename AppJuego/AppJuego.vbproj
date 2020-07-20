@@ -73,7 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.vb" />
+    <Compile Include="metodos.vb" />
     <Compile Include="inicio.vb">
       <SubType>Form</SubType>
     </Compile>

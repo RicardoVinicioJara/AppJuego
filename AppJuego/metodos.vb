@@ -1,7 +1,7 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
 
-Module Conexion
+Module metodos
     Public conexiones As SqlConnection
     Public enunciado As SqlCommand
     Public respuesta As SqlDataReader
@@ -44,6 +44,23 @@ Module Conexion
         Try
             conexiones.Open()
             enunciado = New SqlCommand("SELECT CASE WHEN EXISTS ( SELECT * FROM Jugador WHERE apodo = '" & apodo & "')  THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END", conexiones)
+            resultado = enunciado.ExecuteScalar()
+            conexiones.Close()
+            Return resultado
+
+        Catch ex As Exception
+            resultado = False
+            conexiones.Close()
+
+        End Try
+        Return resultado
+    End Function
+
+    Function Login(ByVal apodo As String, ByVal contra As String) As Boolean
+        Dim resultado As Boolean = False
+        Try
+            conexiones.Open()
+            enunciado = New SqlCommand("SELECT CASE WHEN EXISTS ( SELECT * FROM Jugador WHERE apodo = '" & apodo & "' and Contracenia = '" & contra & "' ) THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END", conexiones)
             resultado = enunciado.ExecuteScalar()
             conexiones.Close()
             Return resultado

@@ -9,7 +9,14 @@ Public Class inicio
     End Sub
 
     Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
-
+        If Login(txtApodoL.Text, txtContraL.Text) = True Then
+            boxJuego.Visible = True
+            txtContraL.Text = ""
+            txtApodoL.Text = ""
+        Else
+            boxJuego.Visible = False
+            MsgBox("Datos Incorrectos", MsgBoxStyle.Exclamation, "Informacion")
+        End If
     End Sub
 
     Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btnCrear.Click

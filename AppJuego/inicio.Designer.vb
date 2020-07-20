@@ -33,14 +33,18 @@ Partial Class inicio
         Me.txtContra = New System.Windows.Forms.TextBox()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
         Me.label1 = New System.Windows.Forms.Label()
-        Me.textBox1 = New System.Windows.Forms.TextBox()
+        Me.txtApodoL = New System.Windows.Forms.TextBox()
         Me.button1 = New System.Windows.Forms.Button()
         Me.label2 = New System.Windows.Forms.Label()
-        Me.textBox2 = New System.Windows.Forms.TextBox()
+        Me.txtContraL = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtFecha = New System.Windows.Forms.DateTimePicker()
+        Me.boxJuego = New System.Windows.Forms.GroupBox()
+        Me.btnJuego1 = New System.Windows.Forms.Button()
+        Me.btnJuego2 = New System.Windows.Forms.Button()
         Me.groupBox2.SuspendLayout()
         Me.groupBox1.SuspendLayout()
+        Me.boxJuego.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblConexion
@@ -146,10 +150,10 @@ Partial Class inicio
         '
         Me.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.groupBox1.Controls.Add(Me.label1)
-        Me.groupBox1.Controls.Add(Me.textBox1)
+        Me.groupBox1.Controls.Add(Me.txtApodoL)
         Me.groupBox1.Controls.Add(Me.button1)
         Me.groupBox1.Controls.Add(Me.label2)
-        Me.groupBox1.Controls.Add(Me.textBox2)
+        Me.groupBox1.Controls.Add(Me.txtContraL)
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupBox1.Location = New System.Drawing.Point(47, 50)
         Me.groupBox1.Name = "groupBox1"
@@ -168,14 +172,15 @@ Partial Class inicio
         Me.label1.TabIndex = 0
         Me.label1.Text = "Apodo"
         '
-        'textBox1
+        'txtApodoL
         '
-        Me.textBox1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBox1.Location = New System.Drawing.Point(70, 86)
-        Me.textBox1.Name = "textBox1"
-        Me.textBox1.Size = New System.Drawing.Size(202, 29)
-        Me.textBox1.TabIndex = 1
-        Me.textBox1.Text = "jara"
+        Me.txtApodoL.Cursor = System.Windows.Forms.Cursors.No
+        Me.txtApodoL.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApodoL.Location = New System.Drawing.Point(70, 86)
+        Me.txtApodoL.Name = "txtApodoL"
+        Me.txtApodoL.Size = New System.Drawing.Size(202, 29)
+        Me.txtApodoL.TabIndex = 1
+        Me.txtApodoL.Text = "jara"
         '
         'button1
         '
@@ -197,15 +202,15 @@ Partial Class inicio
         Me.label2.TabIndex = 2
         Me.label2.Text = "Contraseña"
         '
-        'textBox2
+        'txtContraL
         '
-        Me.textBox2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBox2.Location = New System.Drawing.Point(70, 179)
-        Me.textBox2.Name = "textBox2"
-        Me.textBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.textBox2.Size = New System.Drawing.Size(202, 29)
-        Me.textBox2.TabIndex = 3
-        Me.textBox2.Text = "jara"
+        Me.txtContraL.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtContraL.Location = New System.Drawing.Point(70, 179)
+        Me.txtContraL.Name = "txtContraL"
+        Me.txtContraL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContraL.Size = New System.Drawing.Size(202, 29)
+        Me.txtContraL.TabIndex = 3
+        Me.txtContraL.Text = "jara"
         '
         'Label6
         '
@@ -224,11 +229,46 @@ Partial Class inicio
         Me.txtFecha.Size = New System.Drawing.Size(261, 29)
         Me.txtFecha.TabIndex = 9
         '
+        'boxJuego
+        '
+        Me.boxJuego.BackColor = System.Drawing.Color.Green
+        Me.boxJuego.Controls.Add(Me.btnJuego2)
+        Me.boxJuego.Controls.Add(Me.btnJuego1)
+        Me.boxJuego.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.boxJuego.Location = New System.Drawing.Point(47, 415)
+        Me.boxJuego.Name = "boxJuego"
+        Me.boxJuego.Size = New System.Drawing.Size(414, 138)
+        Me.boxJuego.TabIndex = 11
+        Me.boxJuego.TabStop = False
+        Me.boxJuego.Text = "Seleccione Juego"
+        Me.boxJuego.Visible = False
+        '
+        'btnJuego1
+        '
+        Me.btnJuego1.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnJuego1.Location = New System.Drawing.Point(25, 49)
+        Me.btnJuego1.Name = "btnJuego1"
+        Me.btnJuego1.Size = New System.Drawing.Size(146, 48)
+        Me.btnJuego1.TabIndex = 4
+        Me.btnJuego1.Text = "Acceder"
+        Me.btnJuego1.UseVisualStyleBackColor = True
+        '
+        'btnJuego2
+        '
+        Me.btnJuego2.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnJuego2.Location = New System.Drawing.Point(225, 49)
+        Me.btnJuego2.Name = "btnJuego2"
+        Me.btnJuego2.Size = New System.Drawing.Size(146, 48)
+        Me.btnJuego2.TabIndex = 5
+        Me.btnJuego2.Text = "Acceder"
+        Me.btnJuego2.UseVisualStyleBackColor = True
+        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(948, 585)
+        Me.Controls.Add(Me.boxJuego)
         Me.Controls.Add(Me.lblConexion)
         Me.Controls.Add(Me.groupBox2)
         Me.Controls.Add(Me.groupBox1)
@@ -238,6 +278,7 @@ Partial Class inicio
         Me.groupBox2.PerformLayout()
         Me.groupBox1.ResumeLayout(False)
         Me.groupBox1.PerformLayout()
+        Me.boxJuego.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -254,10 +295,13 @@ Partial Class inicio
     Private WithEvents txtContra As TextBox
     Private WithEvents groupBox1 As GroupBox
     Private WithEvents label1 As Label
-    Private WithEvents textBox1 As TextBox
+    Private WithEvents txtApodoL As TextBox
     Private WithEvents button1 As Button
     Private WithEvents label2 As Label
-    Private WithEvents textBox2 As TextBox
+    Private WithEvents txtContraL As TextBox
     Friend WithEvents txtFecha As DateTimePicker
     Private WithEvents Label6 As Label
+    Private WithEvents boxJuego As GroupBox
+    Private WithEvents btnJuego2 As Button
+    Private WithEvents btnJuego1 As Button
 End Class
