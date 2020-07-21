@@ -76,7 +76,7 @@ Module metodos
     Function insertarJugador(ByVal nombre As String, ByVal fechaNac As Date, ByVal apodo As String, ByVal contrasenia As String) As Boolean
         Dim id As Integer = MaxID() + 1
         Dim resultado As Boolean = False
-        If id > 0 Then
+        If id >= 0 Then
             Try
                 conexiones.Open()
                 enunciado = New SqlCommand("insert into Jugador(id,nombre,fechaNac,apodo,Contracenia) values(" & id & ",'" & nombre & "','" & Format(fechaNac, "yyyy/MM/dd") & "','" & apodo & "','" & contrasenia & "')", conexiones)
