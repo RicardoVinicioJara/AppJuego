@@ -48,6 +48,7 @@
     End Function
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        puntaje = 0
         resultados.Show()
         Me.Hide()
         Me.Dispose()
