@@ -41,8 +41,17 @@
             Dim resConection2 As String = insertarPuntaje(puntaje, 1)
             btnNext.Visible = False
             opcbox.Visible = False
+            btnAceptar.Visible = True
         End If
         Return ""
     End Function
 
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        Me.Hide()
+        resultados.Show()
+    End Sub
+
+    Private Sub groupBox1_Enter(sender As Object, e As EventArgs) Handles groupBox1.Enter
+
+    End Sub
 End Class

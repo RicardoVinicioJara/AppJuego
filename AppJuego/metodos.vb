@@ -7,6 +7,8 @@ Module metodos
     Public respuesta As SqlDataReader
     Public adaptador As SqlDataAdapter
     Public jugador As Integer = 0
+    Public dr As SqlDataReader
+    Public cmd As SqlCommand
 
     Function Abrirconexion() As String
         Try
@@ -137,6 +139,25 @@ Module metodos
         End If
         Return resultado
     End Function
-
+    Function ListarPuntaje() As String
+        Try
+            conexiones.Open()
+            enunciado = New SqlCommand("Select SUM(p.puntaje) as Puntaje, j.apodo as Apodo, p.juego_id as Juego from puntaje p, jugador j where j.id = p.jugador_id GROUP BY p.juego_id, j.apodo", conexiones)
+            dr = enunciado.ExecuteReader()
+            Do While dr.Read
+                'llenar el arreglo
+                MsgBox(dr.GetValue(0) & " <> " & dr.GetString(1) & " <> " & dr.GetValue(2), MsgBoxStyle.Critical, "1111111")
+            Loop
+            If dr.IsClosed = False Then
+                dr.Close()
+            End If
+            conexiones.Close()
+        Catch ex As Exception
+            MsgBox(ex.ToString & ex.Message, MsgBoxStyle.Critical, "weeee")
+            Console.Write("n" + ex.ToString)
+            conexiones.Close()
+        End Try
+        Return ""
+    End Function
 
 End Module

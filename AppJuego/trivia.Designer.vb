@@ -23,31 +23,52 @@ Partial Class trivia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.opcbox = New System.Windows.Forms.ComboBox()
         Me.lblPreguntas = New System.Windows.Forms.Label()
         Me.btnNext = New System.Windows.Forms.Button()
-        Me.opcbox = New System.Windows.Forms.ComboBox()
         Me.groupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'groupBox1
         '
         Me.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.groupBox1.Controls.Add(Me.btnAceptar)
         Me.groupBox1.Controls.Add(Me.opcbox)
         Me.groupBox1.Controls.Add(Me.lblPreguntas)
         Me.groupBox1.Controls.Add(Me.btnNext)
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupBox1.Location = New System.Drawing.Point(12, 12)
         Me.groupBox1.Name = "groupBox1"
-        Me.groupBox1.Size = New System.Drawing.Size(751, 560)
+        Me.groupBox1.Size = New System.Drawing.Size(635, 457)
         Me.groupBox1.TabIndex = 10
         Me.groupBox1.TabStop = False
         Me.groupBox1.Text = "Trivia"
+        '
+        'btnAceptar
+        '
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptar.Location = New System.Drawing.Point(438, 409)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(188, 40)
+        Me.btnAceptar.TabIndex = 6
+        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = True
+        '
+        'opcbox
+        '
+        Me.opcbox.FormattingEnabled = True
+        Me.opcbox.Items.AddRange(New Object() {"a", "b", "c"})
+        Me.opcbox.Location = New System.Drawing.Point(87, 138)
+        Me.opcbox.Name = "opcbox"
+        Me.opcbox.Size = New System.Drawing.Size(364, 32)
+        Me.opcbox.TabIndex = 5
         '
         'lblPreguntas
         '
         Me.lblPreguntas.AutoSize = True
         Me.lblPreguntas.Font = New System.Drawing.Font("Microsoft YaHei UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPreguntas.Location = New System.Drawing.Point(6, 35)
+        Me.lblPreguntas.Location = New System.Drawing.Point(34, 81)
         Me.lblPreguntas.Name = "lblPreguntas"
         Me.lblPreguntas.Size = New System.Drawing.Size(181, 36)
         Me.lblPreguntas.TabIndex = 0
@@ -56,27 +77,18 @@ Partial Class trivia
         'btnNext
         '
         Me.btnNext.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNext.Location = New System.Drawing.Point(478, 82)
+        Me.btnNext.Location = New System.Drawing.Point(190, 200)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(188, 40)
         Me.btnNext.TabIndex = 4
         Me.btnNext.Text = "Siguiente"
         Me.btnNext.UseVisualStyleBackColor = True
         '
-        'opcbox
-        '
-        Me.opcbox.FormattingEnabled = True
-        Me.opcbox.Items.AddRange(New Object() {"a", "b", "c"})
-        Me.opcbox.Location = New System.Drawing.Point(36, 82)
-        Me.opcbox.Name = "opcbox"
-        Me.opcbox.Size = New System.Drawing.Size(364, 32)
-        Me.opcbox.TabIndex = 5
-        '
         'trivia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(787, 584)
+        Me.ClientSize = New System.Drawing.Size(650, 473)
         Me.Controls.Add(Me.groupBox1)
         Me.Name = "trivia"
         Me.Text = "trivia"
@@ -90,4 +102,5 @@ Partial Class trivia
     Private WithEvents lblPreguntas As Label
     Private WithEvents btnNext As Button
     Friend WithEvents opcbox As ComboBox
+    Private WithEvents btnAceptar As Button
 End Class
