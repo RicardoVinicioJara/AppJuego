@@ -1,5 +1,6 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
+Imports System.Collections
 
 Module metodos
     Public conexiones As SqlConnection
@@ -139,14 +140,16 @@ Module metodos
         End If
         Return resultado
     End Function
-    Function ListarPuntaje() As String
+    Function ListarPuntaje() As ArrayList
+        Dim List As New ArrayList
         Try
             conexiones.Open()
             enunciado = New SqlCommand("Select SUM(p.puntaje) as Puntaje, j.apodo as Apodo, p.juego_id as Juego from puntaje p, jugador j where j.id = p.jugador_id GROUP BY p.juego_id, j.apodo", conexiones)
             dr = enunciado.ExecuteReader()
             Do While dr.Read
-                'llenar el arreglo
-                MsgBox(dr.GetValue(0) & " <> " & dr.GetString(1) & " <> " & dr.GetValue(2), MsgBoxStyle.Critical, "1111111")
+                List.Add({dr.GetValue(0), dr.GetString(1), dr.GetValue(2)})
+
+                'MsgBox(dr.GetValue(0) & " <> " & dr.GetString(1) & " <> " & dr.GetValue(2), MsgBoxStyle.Critical, "1111111")'
             Loop
             If dr.IsClosed = False Then
                 dr.Close()
@@ -157,7 +160,7 @@ Module metodos
             Console.Write("n" + ex.ToString)
             conexiones.Close()
         End Try
-        Return ""
+        Return List
     End Function
 
 End Module

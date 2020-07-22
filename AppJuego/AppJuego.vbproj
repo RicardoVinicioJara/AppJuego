@@ -74,6 +74,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="piedra.Designer.vb">
+      <DependentUpon>piedra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="piedra.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="resultados.Designer.vb">
       <DependentUpon>resultados.vb</DependentUpon>
     </Compile>

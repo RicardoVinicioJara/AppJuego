@@ -60,13 +60,12 @@ Partial Class resultados
         Me.btnAceptar.TabIndex = 7
         Me.btnAceptar.Text = "Inicio"
         Me.btnAceptar.UseVisualStyleBackColor = True
-        Me.btnAceptar.Visible = False
         '
         'resultados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(787, 439)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.cuadro)
         Me.Name = "resultados"

@@ -53,7 +53,8 @@ Partial Class trivia
         Me.btnAceptar.Size = New System.Drawing.Size(188, 40)
         Me.btnAceptar.TabIndex = 6
         Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
+        Me.btnAceptar.UseVisualStyleBackColor = False
+        Me.btnAceptar.Visible = False
         '
         'opcbox
         '

@@ -22,6 +22,7 @@
     End Sub
 
     Private Sub trivia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        contador = 0
         PasarPregunta()
     End Sub
 
@@ -47,8 +48,9 @@
     End Function
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        Me.Hide()
         resultados.Show()
+        Me.Hide()
+        Me.Dispose()
     End Sub
 
     Private Sub groupBox1_Enter(sender As Object, e As EventArgs) Handles groupBox1.Enter

@@ -4,8 +4,10 @@ Public Class inicio
     Private Sub inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim resConection As String = Abrirconexion()
         lblConexion.Text = resConection
-        ListarPuntaje()
-        MsgBox("CCCC", MsgBoxStyle.Information, "Se ha conectado correctamente")
+        boxJuego.Visible = False
+        'Dim List = ListarPuntaje()'
+        'MsgBox(List(0)(0).ToString, MsgBoxStyle.Critical, "1111111")'
+
     End Sub
 
     Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
@@ -39,11 +41,14 @@ Public Class inicio
     End Sub
 
     Private Sub btnJuego1_Click(sender As Object, e As EventArgs) Handles btnJuego1.Click
+        boxJuego.Visible = False
         trivia.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnJuego2_Click(sender As Object, e As EventArgs) Handles btnJuego2.Click
-        insertarPuntaje(55, 2)
+        boxJuego.Visible = False
+        piedra.Show()
+        Me.Hide()
     End Sub
 End Class
