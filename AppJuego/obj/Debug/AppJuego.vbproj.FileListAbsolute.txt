@@ -12,3 +12,4 @@ C:\Users\Vinicio\Documents\VisualStudio\AppJuego\AppJuego\obj\Debug\AppJuego.xml
 C:\Users\Vinicio\Documents\VisualStudio\AppJuego\AppJuego\obj\Debug\AppJuego.pdb
 C:\Users\Vinicio\Documents\VisualStudio\AppJuego\AppJuego\obj\Debug\AppJuego.trivia.resources
 C:\Users\Vinicio\Documents\VisualStudio\AppJuego\AppJuego\obj\Debug\AppJuego.resultados.resources
+C:\Users\Vinicio\Documents\VisualStudio\AppJuego\AppJuego\obj\Debug\AppJuego.piedra.resources

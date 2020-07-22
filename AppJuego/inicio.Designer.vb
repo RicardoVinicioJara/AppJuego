@@ -230,9 +230,9 @@ Partial Class inicio
         Me.boxJuego.Controls.Add(Me.btnJuego2)
         Me.boxJuego.Controls.Add(Me.btnJuego1)
         Me.boxJuego.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.boxJuego.Location = New System.Drawing.Point(47, 415)
+        Me.boxJuego.Location = New System.Drawing.Point(12, 398)
         Me.boxJuego.Name = "boxJuego"
-        Me.boxJuego.Size = New System.Drawing.Size(414, 138)
+        Me.boxJuego.Size = New System.Drawing.Size(449, 155)
         Me.boxJuego.TabIndex = 11
         Me.boxJuego.TabStop = False
         Me.boxJuego.Text = "Seleccione Juego"
@@ -241,21 +241,21 @@ Partial Class inicio
         'btnJuego2
         '
         Me.btnJuego2.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnJuego2.Location = New System.Drawing.Point(225, 49)
+        Me.btnJuego2.Location = New System.Drawing.Point(35, 91)
         Me.btnJuego2.Name = "btnJuego2"
-        Me.btnJuego2.Size = New System.Drawing.Size(146, 48)
+        Me.btnJuego2.Size = New System.Drawing.Size(366, 48)
         Me.btnJuego2.TabIndex = 5
-        Me.btnJuego2.Text = "Juego 2"
+        Me.btnJuego2.Text = "Piedra | Papel  | Tijera"
         Me.btnJuego2.UseVisualStyleBackColor = True
         '
         'btnJuego1
         '
         Me.btnJuego1.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnJuego1.Location = New System.Drawing.Point(25, 49)
+        Me.btnJuego1.Location = New System.Drawing.Point(35, 37)
         Me.btnJuego1.Name = "btnJuego1"
-        Me.btnJuego1.Size = New System.Drawing.Size(146, 48)
+        Me.btnJuego1.Size = New System.Drawing.Size(366, 48)
         Me.btnJuego1.TabIndex = 4
-        Me.btnJuego1.Text = "Juego 1"
+        Me.btnJuego1.Text = "Trivia"
         Me.btnJuego1.UseVisualStyleBackColor = True
         '
         'inicio

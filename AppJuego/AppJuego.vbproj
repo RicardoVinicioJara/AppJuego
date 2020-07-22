@@ -126,6 +126,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="piedra.resx">
+      <DependentUpon>piedra.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="resultados.resx">
       <DependentUpon>resultados.vb</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +147,18 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piedra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tijera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
