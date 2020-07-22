@@ -24,6 +24,8 @@ Partial Class inicio
     Private Sub InitializeComponent()
         Me.lblConexion = New System.Windows.Forms.Label()
         Me.groupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtFecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.label5 = New System.Windows.Forms.Label()
         Me.txtApodo = New System.Windows.Forms.TextBox()
         Me.label3 = New System.Windows.Forms.Label()
@@ -37,11 +39,9 @@ Partial Class inicio
         Me.button1 = New System.Windows.Forms.Button()
         Me.label2 = New System.Windows.Forms.Label()
         Me.txtContraL = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtFecha = New System.Windows.Forms.DateTimePicker()
         Me.boxJuego = New System.Windows.Forms.GroupBox()
-        Me.btnJuego1 = New System.Windows.Forms.Button()
         Me.btnJuego2 = New System.Windows.Forms.Button()
+        Me.btnJuego1 = New System.Windows.Forms.Button()
         Me.groupBox2.SuspendLayout()
         Me.groupBox1.SuspendLayout()
         Me.boxJuego.SuspendLayout()
@@ -77,6 +77,23 @@ Partial Class inicio
         Me.groupBox2.TabIndex = 10
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Crear Jugador"
+        '
+        'txtFecha
+        '
+        Me.txtFecha.Location = New System.Drawing.Point(70, 287)
+        Me.txtFecha.Name = "txtFecha"
+        Me.txtFecha.Size = New System.Drawing.Size(261, 29)
+        Me.txtFecha.TabIndex = 9
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(29, 236)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(302, 36)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Fecha de Nacimiento"
         '
         'label5
         '
@@ -207,23 +224,6 @@ Partial Class inicio
         Me.txtContraL.Size = New System.Drawing.Size(202, 29)
         Me.txtContraL.TabIndex = 3
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(29, 236)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(302, 36)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Fecha de Nacimiento"
-        '
-        'txtFecha
-        '
-        Me.txtFecha.Location = New System.Drawing.Point(70, 287)
-        Me.txtFecha.Name = "txtFecha"
-        Me.txtFecha.Size = New System.Drawing.Size(261, 29)
-        Me.txtFecha.TabIndex = 9
-        '
         'boxJuego
         '
         Me.boxJuego.BackColor = System.Drawing.Color.Green
@@ -238,16 +238,6 @@ Partial Class inicio
         Me.boxJuego.Text = "Seleccione Juego"
         Me.boxJuego.Visible = False
         '
-        'btnJuego1
-        '
-        Me.btnJuego1.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnJuego1.Location = New System.Drawing.Point(25, 49)
-        Me.btnJuego1.Name = "btnJuego1"
-        Me.btnJuego1.Size = New System.Drawing.Size(146, 48)
-        Me.btnJuego1.TabIndex = 4
-        Me.btnJuego1.Text = "Juego 1"
-        Me.btnJuego1.UseVisualStyleBackColor = True
-        '
         'btnJuego2
         '
         Me.btnJuego2.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -257,6 +247,16 @@ Partial Class inicio
         Me.btnJuego2.TabIndex = 5
         Me.btnJuego2.Text = "Juego 2"
         Me.btnJuego2.UseVisualStyleBackColor = True
+        '
+        'btnJuego1
+        '
+        Me.btnJuego1.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnJuego1.Location = New System.Drawing.Point(25, 49)
+        Me.btnJuego1.Name = "btnJuego1"
+        Me.btnJuego1.Size = New System.Drawing.Size(146, 48)
+        Me.btnJuego1.TabIndex = 4
+        Me.btnJuego1.Text = "Juego 1"
+        Me.btnJuego1.UseVisualStyleBackColor = True
         '
         'inicio
         '

@@ -37,4 +37,10 @@ Public Class inicio
 
 
     End Sub
+
+    Private Sub btnJuego1_Click(sender As Object, e As EventArgs) Handles btnJuego1.Click
+        trivia.Show()
+        Me.Hide()
+
+    End Sub
 End Class

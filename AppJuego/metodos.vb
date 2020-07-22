@@ -7,7 +7,6 @@ Module metodos
     Public respuesta As SqlDataReader
     Public adaptador As SqlDataAdapter
 
-
     Function Abrirconexion() As String
         Try
             conexiones = New SqlConnection("Data Source=LAPTOP-A3DS3D8A\SQLEXPRESS;Initial Catalog=Juego;Integrated Security=True")
