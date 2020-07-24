@@ -40,12 +40,12 @@ Public Class piedra
             lblResultado.Text = "Gana Sistema"
             sistema = sistema + 1
         ElseIf opc = 3 And numSistema = 1 Then
-            lblResultado.Text = "Gana jugador"
+            lblResultado.Text = "Gana sistema"
+            sistema = sistema + 1
+        ElseIf opc = 3 And numSistema = 2 Then
+            lblResultado.Text = "Gana Jugador"
             jugador = jugador + 1
             puntaje = puntaje + 10
-        ElseIf opc = 3 And numSistema = 2 Then
-            lblResultado.Text = "Gana Sistema"
-            sistema = sistema + 1
         End If
         'cambia la imagen del sistema
         escribirResultados()
@@ -103,7 +103,7 @@ Public Class piedra
     End Sub
 
     Private Sub btnTijera_Click(sender As Object, e As EventArgs) Handles btnTijera.Click
-        'manda a callar pasado la obcion de jugador con piedra
+        'manda a callar pasado la obcion de jugador con tijera
         calcularGanador(3)
     End Sub
 
