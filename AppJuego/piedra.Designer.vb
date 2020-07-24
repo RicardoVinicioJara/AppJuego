@@ -29,11 +29,11 @@ Partial Class piedra
         Me.label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblResultado = New System.Windows.Forms.Label()
         Me.lblSistema = New System.Windows.Forms.Label()
         Me.lblJugador = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.lblResultado = New System.Windows.Forms.Label()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.groupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -110,6 +110,16 @@ Partial Class piedra
         Me.groupBox1.TabStop = False
         Me.groupBox1.Text = "Resultados"
         '
+        'lblResultado
+        '
+        Me.lblResultado.AutoSize = True
+        Me.lblResultado.Font = New System.Drawing.Font("Microsoft YaHei UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblResultado.Location = New System.Drawing.Point(6, 25)
+        Me.lblResultado.Name = "lblResultado"
+        Me.lblResultado.Size = New System.Drawing.Size(179, 36)
+        Me.lblResultado.TabIndex = 5
+        Me.lblResultado.Text = "Respuesta..."
+        '
         'lblSistema
         '
         Me.lblSistema.AutoSize = True
@@ -149,16 +159,6 @@ Partial Class piedra
         Me.Label4.Size = New System.Drawing.Size(122, 36)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Sistema"
-        '
-        'lblResultado
-        '
-        Me.lblResultado.AutoSize = True
-        Me.lblResultado.Font = New System.Drawing.Font("Microsoft YaHei UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblResultado.Location = New System.Drawing.Point(6, 25)
-        Me.lblResultado.Name = "lblResultado"
-        Me.lblResultado.Size = New System.Drawing.Size(179, 36)
-        Me.lblResultado.TabIndex = 5
-        Me.lblResultado.Text = "Respuesta..."
         '
         'btnAceptar
         '

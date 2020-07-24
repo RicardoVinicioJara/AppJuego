@@ -42,6 +42,7 @@ Partial Class inicio
         Me.boxJuego = New System.Windows.Forms.GroupBox()
         Me.btnJuego2 = New System.Windows.Forms.Button()
         Me.btnJuego1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.groupBox2.SuspendLayout()
         Me.groupBox1.SuspendLayout()
         Me.boxJuego.SuspendLayout()
@@ -169,7 +170,7 @@ Partial Class inicio
         Me.groupBox1.Controls.Add(Me.label2)
         Me.groupBox1.Controls.Add(Me.txtContraL)
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBox1.Location = New System.Drawing.Point(47, 50)
+        Me.groupBox1.Location = New System.Drawing.Point(47, 24)
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.Size = New System.Drawing.Size(332, 342)
         Me.groupBox1.TabIndex = 9
@@ -230,7 +231,7 @@ Partial Class inicio
         Me.boxJuego.Controls.Add(Me.btnJuego2)
         Me.boxJuego.Controls.Add(Me.btnJuego1)
         Me.boxJuego.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.boxJuego.Location = New System.Drawing.Point(12, 398)
+        Me.boxJuego.Location = New System.Drawing.Point(12, 382)
         Me.boxJuego.Name = "boxJuego"
         Me.boxJuego.Size = New System.Drawing.Size(449, 155)
         Me.boxJuego.TabIndex = 11
@@ -258,11 +259,22 @@ Partial Class inicio
         Me.btnJuego1.Text = "Trivia"
         Me.btnJuego1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(768, 581)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(181, 48)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "Estadisticas"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(948, 585)
+        Me.ClientSize = New System.Drawing.Size(984, 641)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.boxJuego)
         Me.Controls.Add(Me.lblConexion)
         Me.Controls.Add(Me.groupBox2)
@@ -299,4 +311,5 @@ Partial Class inicio
     Private WithEvents boxJuego As GroupBox
     Private WithEvents btnJuego2 As Button
     Private WithEvents btnJuego1 As Button
+    Private WithEvents Button2 As Button
 End Class

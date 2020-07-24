@@ -15,9 +15,8 @@
                 cuadro.Series("Trivia").Points.AddXY(List(i)(1), Convert.ToInt32(List(i)(0)))
             End If
             If List(i)(2) = "2" Then
-                cuadro.Series("3R").Points.AddXY(List(i)(1), Convert.ToInt32(List(i)(0)))
+                cuadro.Series("PPT").Points.AddXY(List(i)(1), Convert.ToInt32(List(i)(0)))
             End If
-
 
         Next
 

@@ -1,8 +1,9 @@
 ﻿Public Class trivia
-
+    'datos para el inicio de datos
     Public Shared contador As Integer = 0
     Public Shared puntaje As Integer = 0
     Public Shared respuesta As Integer = -100
+    'arreglo de preguntas
     Public Shared preguntas = New String(5, 4) {{"¿Cómo se llama la capital de Ecuador?", "Cuenca", "Lima", "Quito", "3"},
                                          {"¿Cuántas provincias tiene el Ecuador?", "24", "22", "21", "1"},
                                          {"¿En qué fecha se independizó de España?", "14 de enero de 1809", "10 de agosto de 1809", "6 de mayo de 1809", "2"},
@@ -15,18 +16,19 @@
         Else
             If respuesta = opcbox.SelectedIndex Then
                 puntaje = puntaje + 10
-
             End If
             PasarPregunta()
         End If
     End Sub
 
     Private Sub trivia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'inicia con un cotador en cero para psara las preguntas
         contador = 0
         PasarPregunta()
     End Sub
 
     Function PasarPregunta() As String
+        'funcion que rrecorre el arreglo de preguntas
         If contador < 6 Then
             lblPreguntas.Text = preguntas(contador, 0)
             opcbox.Items.Clear()
@@ -38,6 +40,7 @@
             opcbox.SelectedIndex = -1
             opcbox.Text = ""
         Else
+            'en caso de que ya se haya recorrido las 6 preguntas muestra el resultado
             lblPreguntas.Text = "Tu puntaje obtenido es: " & puntaje
             Dim resConection2 As String = insertarPuntaje(puntaje, 1)
             btnNext.Visible = False
@@ -48,6 +51,7 @@
     End Function
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        'muestra el cuadro de resultados
         puntaje = 0
         resultados.Show()
         Me.Hide()

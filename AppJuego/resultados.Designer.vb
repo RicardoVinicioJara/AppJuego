@@ -41,7 +41,7 @@ Partial Class resultados
         Me.cuadro.Name = "cuadro"
         Series1.ChartArea = "ChartArea1"
         Series1.Legend = "Legend1"
-        Series1.Name = "3R"
+        Series1.Name = "PPT"
         Series2.ChartArea = "ChartArea1"
         Series2.Legend = "Legend1"
         Series2.Name = "Trivia"
